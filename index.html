@@ -83,28 +83,36 @@
         }
 
         /* --- Hero Section --- */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1589939705384-5185138a047a?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-        }
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1589939705384-5185138a047a?auto=format&fit=crop&w=1350&q=80');
 
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
             border-bottom: 5px solid var(--primary);
         }
 
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; }
+        .hero p { font-size: 1.2rem;  max-width: 800px; }
+
+.hero img {
+    width: 40%;
+    max-width: 80%;
+}
 
         .btn-whatsapp {
             background: #25d366;
@@ -239,10 +247,9 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <!-- <img src="./Logo_Logo ADM DEMOLIDORA HORIZONTAL.png" /> -->
-        <h1 class="animate__animated animate__fadeInDown">ADM DEMOLIDORA</h1>
+        <img class="animate__animated animate__fadeInDown" src="./image.png" />
         <p class="animate__animated animate__fadeInUp">Demolição técnica, segura e rápida. Atendemos obras residenciais, comerciais e industriais com responsabilidade ambiental.</p>
-        <a href="https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento de demolição." target="_blank" class="btn-whatsapp animate__animated animate__pulse animate__infinite">
+        <a href="https://wa.me/5511997112473?text=Olá! Gostaria de solicitar um orçamento de demolição." target="_blank" class="btn-whatsapp animate__animated animate__pulse animate__infinite">
             <i class="fab fa-whatsapp"></i> SOLICITAR ORÇAMENTO
         </a>
     </section>
@@ -280,7 +287,7 @@
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
             <div>
-                <h3 style="color: var(--primary); font-size: 2.5rem;">15+</h3>
+                <h3 style="color: var(--primary); font-size: 2.5rem;">30+</h3>
                 <p>Anos de experiência</p>
             </div>
             <div>
@@ -300,13 +307,13 @@
             <h3>Pronto para começar sua obra?</h3>
             <p>Não perca tempo com orçamentos demorados. Clique no botão abaixo e fale diretamente com nosso especialista técnico via WhatsApp. Atendimento rápido e gratuito!</p>
             
-            <a href="https://wa.me/5511999999999?text=Olá! Vi o site da ADM Demolidora e gostaria de um orçamento." target="_blank" class="whatsapp-large">
+            <a href="https://wa.me/5511997112473?text=Olá! Vi o site da ADM Demolidora e gostaria de um orçamento." target="_blank" class="whatsapp-large">
                 <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
             </a>
 
             <div style="margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; opacity: 0.8;">
-                <span><i class="fas fa-phone-alt" style="color: var(--primary)"></i> (11) 99999-9999</span>
-                <span><i class="fas fa-envelope" style="color: var(--primary)"></i> contato@admdemolidora.com.br</span>
+                <span><i class="fas fa-phone-alt" style="color: var(--primary)"></i> (11) 99711-2473</span>
+                <span><i class="fas fa-envelope" style="color: var(--primary)"></i> demolidoraadm@gmail.com</span>
                 <span><i class="fas fa-map-marker-alt" style="color: var(--primary)"></i> Atendemos Toda a Região</span>
             </div>
         </div>
@@ -319,7 +326,7 @@
     </footer>
 
     <!-- Botão Flutuante -->
-    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5511997112473" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
