@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADM Demolidora - Especialista em demolição residencial e comercial. Segurança e agilidade.">
+    <title>ADM DEMOLIDORA | Soluções em Demolição</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        :root {
+            --primary: #FFB800; /* Amarelo (Agora cor principal de fundo do header) */
+            --secondary: #1A1A1A; /* Preto (Cor dos botões e textos principais) */
+            --bg-light: #f4f4f4;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        a { text-decoration: none; color: inherit; }
+
+        /* --- Header (Invertido: Fundo Amarelo) --- */
+        header {
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        nav a:hover { opacity: 0.7; }
+
+        .btn-nav {
+            background: var(--secondary);
+            color: var(--primary) !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1589939705384-5185138a047a?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 5px solid var(--primary);
+        }
+
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            padding: 18px 35px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover { transform: scale(1.05); background: #1eb956; }
+
+        /* --- Seções --- */
+        section { padding: 100px 10%; }
+
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 10px; }
+        .section-title .bar { width: 80px; height: 5px; background: var(--primary); margin: 0 auto; }
+
+        /* --- Serviços (Cards Amarelos/Pretos) --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* --- Seção de Contato (Substituindo Form por Botão Grande) --- */
+        .contact-box {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 60px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-box h3 { font-size: 2rem; margin-bottom: 20px; color: var(--primary); }
+        .contact-box p { margin-bottom: 40px; font-size: 1.1rem; opacity: 0.9; }
+
+        .whatsapp-large {
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 25px 50px;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            transition: var(--transition);
+        }
+
+        .whatsapp-large:hover { background: var(--white); transform: translateY(-5px); }
+
+        /* --- Footer --- */
+        footer {
+            background: #111;
+            color: white;
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        /* --- Floating WhatsApp --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; padding: 15px; }
+            nav ul { gap: 10px; font-size: 0.7rem; }
+            .hero h1 { font-size: 2.2rem; }
+            section { padding: 60px 5%; }
+            .contact-box { padding: 30px 15px; }
+            .whatsapp-large { font-size: 1.1rem; padding: 20px; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">ADM <span style="font-weight: 300;">DEMOLIDORA</span></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato" class="btn-nav">FALAR AGORA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <img src="./Logo_Logo ADM DEMOLIDORA HORIZONTAL.png" />
+        <h1 class="animate__animated animate__fadeInDown">ADM DEMOLIDORA</h1>
+        <p class="animate__animated animate__fadeInUp">Demolição técnica, segura e rápida. Atendemos obras residenciais, comerciais e industriais com responsabilidade ambiental.</p>
+        <a href="https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento de demolição." target="_blank" class="btn-whatsapp animate__animated animate__pulse animate__infinite">
+            <i class="fab fa-whatsapp"></i> SOLICITAR ORÇAMENTO
+        </a>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+        <div class="section-title">
+            <h2>Nossos Serviços</h2>
+            <div class="bar"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>Demolição Mecanizada</h3>
+                <p>Uso de máquinas pesadas para demolições de grande porte em tempo recorde.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Demolição Manual</h3>
+                <p>Trabalho cuidadoso e preciso para demolições parciais ou áreas de difícil acesso.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-truck-loading"></i>
+                <h3>Limpeza de Terreno</h3>
+                <p>Remoção completa de entulho com destinação correta e licenciada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Simplificado -->
+    <section id="sobre" style="background-color: var(--bg-light);">
+        <div class="section-title">
+            <h2>Por que escolher a ADM?</h2>
+            <div class="bar"></div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+            <div>
+                <h3 style="color: var(--primary); font-size: 2.5rem;">15+</h3>
+                <p>Anos de experiência</p>
+            </div>
+            <div>
+                <h3 style="color: var(--primary); font-size: 2.5rem;">100%</h3>
+                <p>Segurança Garantida</p>
+            </div>
+            <div>
+                <h3 style="color: var(--primary); font-size: 2.5rem;">Ecológico</h3>
+                <p>Descarte Sustentável</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato (Novo Método Sem Formulário) -->
+    <section id="contato">
+        <div class="contact-box">
+            <h3>Pronto para começar sua obra?</h3>
+            <p>Não perca tempo com orçamentos demorados. Clique no botão abaixo e fale diretamente com nosso especialista técnico via WhatsApp. Atendimento rápido e gratuito!</p>
+            
+            <a href="https://wa.me/5511999999999?text=Olá! Vi o site da ADM Demolidora e gostaria de um orçamento." target="_blank" class="whatsapp-large">
+                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+            </a>
+
+            <div style="margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; opacity: 0.8;">
+                <span><i class="fas fa-phone-alt" style="color: var(--primary)"></i> (11) 99999-9999</span>
+                <span><i class="fas fa-envelope" style="color: var(--primary)"></i> contato@admdemolidora.com.br</span>
+                <span><i class="fas fa-map-marker-alt" style="color: var(--primary)"></i> Atendemos Toda a Região</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>ADM DEMOLIDORA</strong> &copy; 2023 - Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 10px;">Demolição com segurança e respeito às normas vigentes.</p>
+    </footer>
+
+    <!-- Botão Flutuante -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Efeito simples de scroll para o Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '0.7rem 5%';
+            } else {
+                header.style.padding = '1rem 5%';
+            }
+        });
+    </script>
+
+</body>
+</html>
